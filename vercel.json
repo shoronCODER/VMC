@@ -1,0 +1,9 @@
+{
+  "version": 2,
+  "rewrites": [
+    {
+      "source": "/.netlify/functions/api-proxy",
+      "destination": "/api/api-proxy"
+    }
+  ]
+}
