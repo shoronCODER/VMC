@@ -1,0 +1,19 @@
+{
+  "rules": {
+    "users": {
+      "$uid": {
+        ".read": "auth != null && (auth.uid === $uid || auth.token.email === 'admin.shoron@vmctool.com')",
+        ".write": "auth != null && (auth.uid === $uid || auth.token.email === 'admin.shoron@vmctool.com')"
+      },
+      ".read": "auth != null && auth.token.email === 'admin.shoron@vmctool.com'"
+    },
+    "vmc_config": {
+      ".read": "true",
+      ".write": "auth != null && auth.token.email === 'admin.shoron@vmctool.com'"
+    },
+    "claimed_emails": {
+      ".read": "auth != null",
+      ".write": "auth != null"
+    }
+  }
+}
