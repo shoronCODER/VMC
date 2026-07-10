@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="VMC - Valid Mail Checker. Ultra-Premium 3D interactive email validation tool.">
+  <title>VMC - Valid Mail Checker Pro</title>
+  
+  <!-- Premium Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;800&family=Montserrat:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css?v=3.0">
+  <link rel="icon" id="dynamic-favicon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💎</text></svg>">
+</head>
+<body>
+
+  <!-- PARTICLE BACKGROUND -->
+  <div id="particles-js"></div>
+
+  <!-- LOADER SCREEN -->
+  <div id="loader-screen">
+    <!-- From Uiverse.io by Nawsome -->
+    <div class="svg-frame">
+      <svg style="--i:0;--j:0;">
+        <g id="out1">
+          <path d="M72 172C72 116.772 116.772 72 172 72C227.228 72 272 116.772 272 172C272 227.228 227.228 272 172 272C116.772 272 72 227.228 72 172ZM197.322 172C197.322 158.015 185.985 146.678 172 146.678C158.015 146.678 146.678 158.015 146.678 172C146.678 185.985 158.015 197.322 172 197.322C185.985 197.322 197.322 185.985 197.322 172Z"></path>
+          <path mask="url(#path-1-inside-1_111_3212)" stroke-miterlimit="16" stroke-width="2" stroke="#00FFFF" d="M72 172C72 116.772 116.772 72 172 72C227.228 72 272 116.772 272 172C272 227.228 227.228 272 172 272C116.772 272 72 227.228 72 172ZM197.322 172C197.322 158.015 185.985 146.678 172 146.678C158.015 146.678 146.678 158.015 146.678 172C146.678 185.985 158.015 197.322 172 197.322C185.985 197.322 197.322 185.985 197.322 172Z"></path>
+        </g>
+      </svg>
+
+      <svg style="--i:1;--j:1;">
+        <g id="out2">
+          <mask fill="white" id="path-2-inside-2_111_3212">
+            <path d="M102.892 127.966C93.3733 142.905 88.9517 160.527 90.2897 178.19L94.3752 177.88C93.1041 161.1 97.3046 144.36 106.347 130.168L102.892 127.966Z"></path>
+            <path d="M93.3401 194.968C98.3049 211.971 108.646 226.908 122.814 237.541L125.273 234.264C111.814 224.163 101.99 209.973 97.2731 193.819L93.3401 194.968Z"></path>
+            <path d="M152.707 92.3592C140.33 95.3575 128.822 101.199 119.097 109.421L121.742 112.55C130.981 104.739 141.914 99.1897 153.672 96.3413L152.707 92.3592Z"></path>
+            <path d="M253.294 161.699C255.099 175.937 253.132 190.4 247.59 203.639L243.811 202.057C249.075 189.48 250.944 175.74 249.23 162.214L253.294 161.699Z"></path>
+            <path d="M172 90.0557C184.677 90.0557 197.18 92.9967 208.528 98.6474C219.875 104.298 229.757 112.505 237.396 122.621L234.126 125.09C226.869 115.479 217.481 107.683 206.701 102.315C195.921 96.9469 184.043 94.1529 172 94.1529V90.0557Z"></path>
+            <path d="M244.195 133.235C246.991 138.442 249.216 143.937 250.83 149.623L246.888 150.742C245.355 145.34 243.242 140.12 240.586 135.174L244.195 133.235Z"></path>
+            <path d="M234.238 225.304C223.932 237.338 210.358 246.126 195.159 250.604C179.961 255.082 163.79 255.058 148.606 250.534L149.775 246.607C164.201 250.905 179.563 250.928 194.001 246.674C208.44 242.42 221.335 234.071 231.126 222.639L234.238 225.304Z"></path>
+          </mask>
+          <path mask="url(#path-2-inside-2_111_3212)" fill="#00FFFF" d="M102.892 127.966C93.3733 142.905 88.9517 160.527 90.2897 178.19L94.3752 177.88C93.1041 161.1 97.3046 144.36 106.347 130.168L102.892 127.966ZM93.3401 194.968C98.3049 211.971 108.646 226.908 122.814 237.541L125.273 234.264C111.814 224.163 101.99 209.973 97.2731 193.819L93.3401 194.968ZM152.707 92.3592C140.33 95.3575 128.822 101.199 119.097 109.421L121.742 112.55C130.981 104.739 141.914 99.1897 153.672 96.3413L152.707 92.3592ZM253.294 161.699C255.099 175.937 253.132 190.4 247.59 203.639L243.811 202.057C249.075 189.48 250.944 175.74 249.23 162.214L253.294 161.699ZM172 90.0557C184.677 90.0557 197.18 92.9967 208.528 98.6474C219.875 104.298 229.757 112.505 237.396 122.621L234.126 125.09C226.869 115.479 217.481 107.683 206.701 102.315C195.921 96.9469 184.043 94.1529 172 94.1529V90.0557ZM244.195 133.235C246.991 138.442 249.216 143.937 250.83 149.623L246.888 150.742C245.355 145.34 243.242 140.12 240.586 135.174L244.195 133.235ZM234.238 225.304C223.932 237.338 210.358 246.126 195.159 250.604C179.961 255.082 163.79 255.058 148.606 250.534L149.775 246.607C164.201 250.905 179.563 250.928 194.001 246.674C208.44 242.42 221.335 234.071 231.126 222.639L234.238 225.304Z"></path>
+        </g>
+      </svg>
+
+      <svg style="--i:0;--j:2;">
+        <g id="inner3">
+          <path d="M195.136 135.689C188.115 131.215 179.948 128.873 171.624 128.946C163.299 129.019 155.174 131.503 148.232 136.099L148.42 136.382C155.307 131.823 163.368 129.358 171.627 129.286C179.886 129.213 187.988 131.537 194.954 135.975L195.136 135.689Z"></path>
+          <path d="M195.136 208.311C188.115 212.784 179.948 215.127 171.624 215.054C163.299 214.981 155.174 212.496 148.232 207.901L148.42 207.618C155.307 212.177 163.368 214.642 171.627 214.714C179.886 214.786 187.988 212.463 194.954 208.025L195.136 208.311Z"></path>
+          <path mask="url(#path-5-inside-3_111_3212)" fill="#00FFFF" d="M195.136 135.689C188.115 131.215 179.948 128.873 171.624 128.946C163.299 129.019 155.174 131.503 148.232 136.099L148.42 136.382C155.307 131.823 163.368 129.358 171.627 129.286C179.886 129.213 187.988 131.537 194.954 135.975L195.136 135.689ZM195.136 208.311C188.115 212.784 179.948 215.127 171.624 215.054C163.299 214.981 155.174 212.496 148.232 207.901L148.42 207.618C155.307 212.177 163.368 214.642 171.627 214.714C179.886 214.786 187.988 212.463 194.954 208.025L195.136 208.311Z"></path>
+        </g>
+        <path stroke="#00FFFF" d="M240.944 172C240.944 187.951 235.414 203.408 225.295 215.738C215.176 228.068 201.095 236.508 185.45 239.62C169.806 242.732 153.567 240.323 139.5 232.804C125.433 225.285 114.408 213.12 108.304 198.384C102.2 183.648 101.394 167.25 106.024 151.987C110.654 136.723 120.434 123.537 133.696 114.675C146.959 105.813 162.884 101.824 178.758 103.388C194.632 104.951 209.472 111.97 220.751 123.249" id="out3"></path>
+      </svg>
+
+      <svg style="--i:1;--j:3;">
+        <g id="inner1">
+          <path fill="#00FFFF" d="M145.949 124.51L148.554 129.259C156.575 124.859 165.672 122.804 174.806 123.331C183.94 123.858 192.741 126.944 200.203 132.236C207.665 137.529 213.488 144.815 217.004 153.261C220.521 161.707 221.59 170.972 220.09 179.997L224.108 180.665L224.102 180.699L229.537 181.607C230.521 175.715 230.594 169.708 229.753 163.795L225.628 164.381C224.987 159.867 223.775 155.429 222.005 151.179C218.097 141.795 211.628 133.699 203.337 127.818C195.045 121.937 185.266 118.508 175.118 117.923C165.302 117.357 155.525 119.474 146.83 124.037C146.535 124.192 146.241 124.349 145.949 124.51ZM224.638 164.522C224.009 160.091 222.819 155.735 221.082 151.563C217.246 142.352 210.897 134.406 202.758 128.634C194.62 122.862 185.021 119.496 175.06 118.922C165.432 118.367 155.841 120.441 147.311 124.914L148.954 127.91C156.922 123.745 165.876 121.814 174.864 122.333C184.185 122.87 193.166 126.019 200.782 131.421C208.397 136.822 214.339 144.257 217.928 152.877C221.388 161.188 222.526 170.276 221.23 179.173L224.262 179.677C224.998 174.671 225.35 169.535 224.638 164.522Z" clip-rule="evenodd" fill-rule="evenodd"></path>
+          <path fill="#00FFFF" d="M139.91 220.713C134.922 217.428 130.469 213.395 126.705 208.758L130.983 205.286L130.985 205.288L134.148 202.721C141.342 211.584 151.417 217.642 162.619 219.839C173.821 222.036 185.438 220.232 195.446 214.742L198.051 219.491C197.759 219.651 197.465 219.809 197.17 219.963C186.252 225.693 173.696 227.531 161.577 225.154C154.613 223.789 148.041 221.08 142.202 217.234L139.91 220.713ZM142.752 216.399C148.483 220.174 154.934 222.833 161.769 224.173C173.658 226.504 185.977 224.704 196.689 219.087L195.046 216.09C185.035 221.323 173.531 222.998 162.427 220.82C151.323 218.643 141.303 212.747 134.01 204.122L131.182 206.5C134.451 210.376 138.515 213.607 142.752 216.399Z" clip-rule="evenodd" fill-rule="evenodd"></path>
+        </g>
+      </svg>
+
+      <svg style="--i:2;--j:4;">
+        <path fill="#00FFFF" d="M180.956 186.056C183.849 184.212 186.103 181.521 187.41 178.349C188.717 175.177 189.013 171.679 188.258 168.332C187.503 164.986 185.734 161.954 183.192 159.65C180.649 157.346 177.458 155.883 174.054 155.46C170.649 155.038 167.197 155.676 164.169 157.288C161.14 158.9 158.683 161.407 157.133 164.468C155.582 167.528 155.014 170.992 155.505 174.388C155.997 177.783 157.524 180.944 159.879 183.439L161.129 182.259C159.018 180.021 157.648 177.186 157.207 174.141C156.766 171.096 157.276 167.989 158.667 165.245C160.057 162.5 162.261 160.252 164.977 158.806C167.693 157.36 170.788 156.788 173.842 157.167C176.895 157.546 179.757 158.858 182.037 160.924C184.317 162.99 185.904 165.709 186.581 168.711C187.258 171.712 186.992 174.849 185.82 177.694C184.648 180.539 182.627 182.952 180.032 184.606L180.956 186.056Z" id="center1"></path>
+        <path fill="#00FFFF" d="M172 166.445C175.068 166.445 177.556 168.932 177.556 172C177.556 175.068 175.068 177.556 172 177.556C168.932 177.556 166.444 175.068 166.444 172C166.444 168.932 168.932 166.445 172 166.445ZM172 177.021C174.773 177.021 177.021 174.773 177.021 172C177.021 169.227 174.773 166.979 172 166.979C169.227 166.979 166.979 169.227 166.979 172C166.979 174.773 169.227 177.021 172 177.021Z" id="center"></path>
+      </svg>
+    </div>
+    <p class="loader-text">INITIALIZING VMC ENGINE PRO...</p>
+  </div>
+
+  <!-- FULLSCREEN PROCESSOR AUTH SCREEN -->
+  <div id="auth-screen">
+    <div class="processor-bg-container">
+      <div class="main-container">
+        <div class="loader">
+          <svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="chipGradient" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#2d2d2d"></stop>
+                <stop offset="100%" stop-color="#0f0f0f"></stop>
+              </linearGradient>
+              <linearGradient id="textGradient" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#eeeeee"></stop>
+                <stop offset="100%" stop-color="#888888"></stop>
+              </linearGradient>
+              <linearGradient id="pinGradient" x1="1" y1="0" x2="0" y2="0">
+                <stop offset="0%" stop-color="#bbbbbb"></stop>
+                <stop offset="50%" stop-color="#888888"></stop>
+                <stop offset="100%" stop-color="#555555"></stop>
+              </linearGradient>
+            </defs>
+            <g id="traces">
+              <path d="M100 100 H200 V210 H326" class="trace-bg"></path>
+              <path d="M100 100 H200 V210 H326" class="trace-flow purple"></path>
+              <path d="M80 180 H180 V230 H326" class="trace-bg"></path>
+              <path d="M80 180 H180 V230 H326" class="trace-flow blue"></path>
+              <path d="M60 260 H150 V250 H326" class="trace-bg"></path>
+              <path d="M60 260 H150 V250 H326" class="trace-flow yellow"></path>
+              <path d="M100 350 H200 V270 H326" class="trace-bg"></path>
+              <path d="M100 350 H200 V270 H326" class="trace-flow green"></path>
+              <path d="M700 90 H560 V210 H474" class="trace-bg"></path>
+              <path d="M700 90 H560 V210 H474" class="trace-flow blue"></path>
+              <path d="M740 160 H580 V230 H474" class="trace-bg"></path>
+              <path d="M740 160 H580 V230 H474" class="trace-flow green"></path>
+              <path d="M720 250 H590 V250 H474" class="trace-bg"></path>
+              <path d="M720 250 H590 V250 H474" class="trace-flow red"></path>
+              <path d="M680 340 H570 V270 H474" class="trace-bg"></path>
+              <path d="M680 340 H570 V270 H474" class="trace-flow yellow"></path>
+            </g>
+            <rect x="330" y="190" width="140" height="100" rx="20" ry="20" fill="url(#chipGradient)" stroke="#222" stroke-width="3" filter="drop-shadow(0 0 6px rgba(0,0,0,0.8))"></rect>
+            <g>
+              <rect x="322" y="205" width="8" height="10" fill="url(#pinGradient)" rx="2"></rect>
+              <rect x="322" y="225" width="8" height="10" fill="url(#pinGradient)" rx="2"></rect>
+              <rect x="322" y="245" width="8" height="10" fill="url(#pinGradient)" rx="2"></rect>
+              <rect x="322" y="265" width="8" height="10" fill="url(#pinGradient)" rx="2"></rect>
+            </g>
+            <g>
+              <rect x="470" y="205" width="8" height="10" fill="url(#pinGradient)" rx="2"></rect>
+              <rect x="470" y="225" width="8" height="10" fill="url(#pinGradient)" rx="2"></rect>
+              <rect x="470" y="245" width="8" height="10" fill="url(#pinGradient)" rx="2"></rect>
+              <rect x="470" y="265" width="8" height="10" fill="url(#pinGradient)" rx="2"></rect>
+            </g>
+            <text x="400" y="245" font-family="Arial, sans-serif" font-size="18" fill="url(#textGradient)" text-anchor="middle" alignment-baseline="middle">VMC PRO</text>
+            <circle cx="100" cy="100" r="5" fill="black"></circle>
+            <circle cx="80" cy="180" r="5" fill="black"></circle>
+            <circle cx="60" cy="260" r="5" fill="black"></circle>
+            <circle cx="100" cy="350" r="5" fill="black"></circle>
+            <circle cx="700" cy="90" r="5" fill="black"></circle>
+            <circle cx="740" cy="160" r="5" fill="black"></circle>
+            <circle cx="720" cy="250" r="5" fill="black"></circle>
+            <circle cx="680" cy="340" r="5" fill="black"></circle>
+          </svg>
+        </div>
+      </div>
+    </div>
+
+    <!-- AUTH CARD (styled like the chip) -->
+    <div class="auth-card" id="auth-card">
+      <div class="auth-chip-pins auth-chip-pins-left">
+        <span></span><span></span><span></span><span></span>
+      </div>
+      <div class="auth-chip-pins auth-chip-pins-right">
+        <span></span><span></span><span></span><span></span>
+      </div>
+      <div class="auth-card-inner">
+        <div class="auth-card-header">
+          <h1 class="auth-logo">VMC</h1>
+          <p class="auth-subtitle">VALID MAIL CHECKER PRO</p>
+        </div>
+
+        <div class="auth-tabs">
+          <button class="auth-tab active" id="login-tab-btn" onclick="switchAuthTab('login')">LOGIN</button>
+          <button class="auth-tab" id="signup-tab-btn" onclick="switchAuthTab('signup')">SIGN UP</button>
+        </div>
+
+        <!-- LOGIN FORM -->
+        <div id="login-form" class="auth-form">
+          <div class="auth-field">
+            <label class="auth-label">USERNAME</label>
+            <input type="text" id="login-username" class="auth-input" placeholder="Enter username" autocomplete="username">
+          </div>
+          <div class="auth-field">
+            <label class="auth-label">PASSWORD</label>
+            <input type="password" id="login-password" class="auth-input" placeholder="Enter password" autocomplete="current-password">
+          </div>
+          <div class="auth-remember">
+            <label class="auth-checkbox-label">
+              <input type="checkbox" id="remember-me" class="auth-checkbox">
+              <span class="auth-checkmark"></span>
+              Remember me
+            </label>
+          </div>
+          <button class="auth-btn" id="login-btn" onclick="handleLogin()">
+            <span class="auth-btn-bg"></span>
+            <span class="auth-btn-text">INITIALIZE LOGIN</span>
+          </button>
+          <p class="auth-error" id="login-error"></p>
+        </div>
+
+        <!-- SIGNUP FORM -->
+        <div id="signup-form" class="auth-form hidden">
+          <div class="auth-field">
+            <label class="auth-label">USERNAME</label>
+            <input type="text" id="signup-username" class="auth-input" placeholder="Choose a username" autocomplete="username">
+          </div>
+          <div class="auth-field">
+            <label class="auth-label">PASSWORD</label>
+            <input type="password" id="signup-password" class="auth-input" placeholder="Choose a password" autocomplete="new-password">
+          </div>
+          <div class="auth-field">
+            <label class="auth-label">CONFIRM PASSWORD</label>
+            <input type="password" id="signup-confirm" class="auth-input" placeholder="Confirm password" autocomplete="new-password">
+          </div>
+          <button class="auth-btn" id="signup-btn" onclick="handleSignup()">
+            <span class="auth-btn-bg"></span>
+            <span class="auth-btn-text">CREATE ACCOUNT</span>
+          </button>
+          <p class="auth-error" id="signup-error"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MAIN APPLICATION -->
+  <div id="main-app" class="hidden">
+    <!-- Header -->
+    <header id="app-header">
+      <div class="header-branding">
+        <img id="header-logo" src="" alt="" class="header-logo hidden">
+        <div>
+          <h1 id="app-title" class="brand-title">VMC PRO</h1>
+          <span class="brand-version">ENTERPRISE SYSTEM</span>
+        </div>
+      </div>
+      
+      <div class="header-actions">
+        <span class="header-user-badge" id="header-user-badge" title="Logged in user"></span>
+        <!-- Toggle Switch -->
+        <input id="theme-toggle" type="checkbox" checked/>
+        <label class="switch" for="theme-toggle">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="slider">
+            <path d="M288 32c0-17.7-14.3-32-32-32s-32 14.3-32 32V256c0 17.7 14.3 32 32 32s32-14.3 32-32V32zM143.5 120.6c13.6-11.3 15.4-31.5 4.1-45.1s-31.5-15.4-45.1-4.1C49.7 115.4 16 181.8 16 256c0 132.5 107.5 240 240 240s240-107.5 240-240c0-74.2-33.8-140.6-86.6-184.6c-13.6-11.3-33.8-9.4-45.1 4.1s-9.4 33.8 4.1 45.1c38.9 32.3 63.5 81 63.5 135.4c0 97.2-78.8 176-176 176s-176-78.8-176-176c0-54.4 24.7-103.1 63.5-135.4z"></path>
+          </svg>
+        </label>
+        <button class="logout-btn" id="logout-btn" onclick="handleLogout()" title="Logout">⏻ LOGOUT</button>
+      </div>
+    </header>
+
+    <!-- API USAGE LIMIT BAR -->
+    <div class="api-usage-bar">
+      <div class="usage-inner">
+        <div class="usage-label"><span class="usage-icon">⚡</span> API CREDITS</div>
+        <span class="usage-mode-badge" id="api-usage-mode">👤 INDIVIDUAL</span>
+        <div class="usage-track">
+          <div class="usage-fill" id="api-usage-fill"></div>
+          <div class="usage-shimmer"></div>
+        </div>
+        <span class="usage-numbers" id="api-usage-numbers">— / —</span>
+        <span class="usage-text" id="api-usage-text">Loading...</span>
+        <span class="usage-delta" id="api-usage-delta"></span>
+      </div>
+    </div>
+
+    <div class="dashboard-grid">
+      <!-- SIDEBAR / ENGINE STATUS PANELS -->
+      <aside class="sidebar-panel">
+        <!-- Engine Status -->
+        <div class="premium-card">
+          <div class="card-header">
+            <h3><span class="icon">🛡️</span> SYSTEM MONITORS</h3>
+          </div>
+          <div class="monitor-dashboard-grid">
+            <div class="mini-monitor-status" id="db-mon-firebase">
+              <span class="indicator-glow bg-success"></span>
+              <div>
+                <div class="mon-title">FIREBASE STORAGE</div>
+                <div class="mon-val" id="db-mon-firebase-txt">CONNECTED</div>
+              </div>
+            </div>
+            <div class="mini-monitor-status" id="db-mon-serp">
+              <span class="indicator-glow bg-success"></span>
+              <div>
+                <div class="mon-title">SERPAPI SYSTEM</div>
+                <div class="mon-val" id="db-mon-serp-txt">KEY ACTIVE</div>
+              </div>
+            </div>
+            <div class="mini-monitor-status" id="db-mon-gravatar">
+              <span class="indicator-glow bg-success"></span>
+              <div>
+                <div class="mon-title">GRAVATAR ENGINE</div>
+                <div class="mon-val" id="db-mon-gravatar-txt">READY</div>
+              </div>
+            </div>
+            <div class="mini-monitor-status" id="db-mon-imgbb">
+              <span class="indicator-glow bg-warning"></span>
+              <div>
+                <div class="mon-title">IMGBB STORAGE</div>
+                <div class="mon-val" id="db-mon-imgbb-txt">NO API KEY</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Mode Select Card -->
+        <div class="premium-card margin-top">
+          <div class="card-header">
+            <h3><span class="icon">⚙️</span> EXTRACTION MODE</h3>
+          </div>
+          <div class="cyber-dropdown-wrapper">
+            <select id="mode-select" class="premium-select">
+              <option value="">Choose system protocol...</option>
+              <option value="manual">📋 Manual Raw Input</option>
+              <option value="automatic">⚡ Intelligent Auto Finder</option>
+              <option value="codemail">📧 Code Mail</option>
+            </select>
+          </div>
+        </div>
+      </aside>
+
+      <!-- MAIN WORKSPACE -->
+      <main class="main-workspace">
+        <!-- Manual Section -->
+        <section id="manual-section" class="premium-card hidden animate-fade">
+          <div class="card-header">
+            <h3>📋 RAW DATA PARSING PROTOCOL</h3>
+          </div>
+          
+          <div class="workspace-tabs">
+            <button class="workspace-tab active" data-tab="text-tab">TEXT BLOB</button>
+            <button class="workspace-tab" data-tab="csv-tab">CSV SHEET</button>
+            <button class="workspace-tab" data-tab="excel-tab">EXCEL PROTOCOL</button>
+          </div>
+
+          <div id="text-tab" class="tab-pane active">
+            <textarea id="email-text-input" class="premium-textarea" placeholder="Paste target email list (plain text, CSV, or commas accepted)..."></textarea>
+            <button id="validate-text-btn" class="glow-btn">
+              <span class="glow-btn-bg"></span>
+              <span class="glow-btn-text">RUN PARSER & VALIDATE</span>
+            </button>
+          </div>
+
+          <div id="csv-tab" class="tab-pane hidden">
+            <label class="premium-dropzone" id="csv-drop-zone">
+              <input type="file" id="csv-file" accept=".csv" hidden>
+              <span class="dropzone-icon">📥</span>
+              <span class="dropzone-text">DRAG CSV FILE OR BROWSE SYSTEM</span>
+            </label>
+          </div>
+
+          <div id="excel-tab" class="tab-pane hidden">
+            <label class="premium-dropzone" id="excel-drop-zone">
+              <input type="file" id="excel-file" accept=".xlsx,.xls" hidden>
+              <span class="dropzone-icon">📊</span>
+              <span class="dropzone-text">DRAG EXCEL DOCUMENT PROTOCOL</span>
+            </label>
+          </div>
+        </section>
+
+        <!-- Automatic Section -->
+        <section id="auto-section" class="premium-card hidden animate-fade">
+          <div class="card-header">
+            <h3>⚡ INTELLIGENT SEARCH ENGINE EXTRACTOR</h3>
+          </div>
+          
+          <div class="workspace-form">
+            <div class="cyber-form-group">
+              <label class="premium-label">TARGET IDENTITY KEYWORD</label>
+              <input type="text" id="auto-name" class="premium-input" placeholder="e.g. CEO, Henry, Director...">
+            </div>
+            
+            <div class="cyber-form-group">
+              <label class="premium-label">GEOGRAPHIC HOST LOCATION</label>
+              <div class="search-drop-wrapper">
+                <input type="text" id="country-search" class="premium-input" placeholder="Type or click to choose target country...">
+                <div id="country-dropdown" class="premium-dropdown-list hidden"></div>
+              </div>
+            </div>
+
+            <div class="cyber-form-group">
+              <label class="premium-label">MAIL SERVER GATEWAY DOMAIN</label>
+              <div class="cyber-dropdown-wrapper">
+                <select id="auto-extension" class="premium-select">
+                  <option value="@gmail.com">@gmail.com</option>
+                  <option value="@yahoo.com">@yahoo.com</option>
+                  <option value="@hotmail.com">@hotmail.com</option>
+                  <option value="@outlook.com">@outlook.com</option>
+                  <option value="@aol.com">@aol.com</option>
+                  <option value="@protonmail.com">@protonmail.com</option>
+                  <option value="@icloud.com">@icloud.com</option>
+                  <option value="@mail.com">@mail.com</option>
+                  <option value="@zoho.com">@zoho.com</option>
+                  <option value="@yandex.com">@yandex.com</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="cyber-form-group">
+              <label class="premium-label">MAXIMUM EMAILS TO COLLECT</label>
+              <div class="cyber-dropdown-wrapper">
+                <select id="auto-max-emails" class="premium-select">
+                  <option value="10">10 Emails</option>
+                  <option value="25">25 Emails</option>
+                  <option value="50" selected>50 Emails</option>
+                  <option value="100">100 Emails</option>
+                  <option value="200">200 Emails</option>
+                  <option value="500">500 Emails</option>
+                </select>
+              </div>
+            </div>
+
+            <button id="auto-search-btn" class="glow-btn">
+              <span class="glow-btn-bg"></span>
+              <span class="glow-btn-text">INITIALIZE MULTI-THREAD EXTRACTION</span>
+            </button>
+          </div>
+        </section>
+
+        <!-- Code Mail Section -->
+        <section id="codemail-section" class="premium-card hidden animate-fade">
+          <div class="card-header">
+            <h3>📧 CODE MAIL LOGIN ENGINE</h3>
+          </div>
+          
+          <div class="codemail-workspace">
+            <!-- Mail Login Input Card -->
+            <div class="codemail-login-card">
+              <div class="codemail-login-header">
+                <span class="codemail-login-icon">🔐</span>
+                <div>
+                  <h4 class="codemail-login-title">MAIL CREDENTIAL INPUT</h4>
+                  <p class="codemail-login-subtitle">Enter email credentials to activate inbox protocol</p>
+                </div>
+              </div>
+              
+              <div class="codemail-credentials-list" id="codemail-credentials-list">
+                <div class="codemail-cred-row" data-row-index="0">
+                  <div class="codemail-cred-field">
+                    <label class="premium-label">EMAIL ADDRESS</label>
+                    <input type="email" class="premium-input codemail-email-input" placeholder="user@gmail.com">
+                  </div>
+                  <div class="codemail-cred-field">
+                    <label class="premium-label">APP PASSWORD</label>
+                    <input type="password" class="premium-input codemail-pass-input" placeholder="App password or mail password">
+                  </div>
+                  <button class="codemail-remove-row-btn hidden" onclick="removeCredRow(this)" title="Remove">✕</button>
+                </div>
+              </div>
+              
+              <div class="codemail-actions-row">
+                <button class="codemail-add-btn" id="codemail-add-btn" onclick="addCredRow()">
+                  <span>＋</span> ADD ANOTHER ACCOUNT
+                </button>
+              </div>
+              
+              <button id="codemail-login-btn" class="glow-btn">
+                <span class="glow-btn-bg"></span>
+                <span class="glow-btn-text">🚀 INITIALIZE MAIL LOGIN ENGINE</span>
+              </button>
+            </div>
+
+            <!-- Login Status Panel -->
+            <div id="codemail-status-panel" class="codemail-status-panel hidden">
+              <div class="card-header">
+                <h3><span class="icon">📡</span> LOGIN STATUS MONITOR</h3>
+              </div>
+              <div id="codemail-status-list" class="codemail-status-list"></div>
+            </div>
+
+            <!-- Inbox Card (Activates after successful login) -->
+            <div id="codemail-inbox-card" class="codemail-inbox-card hidden">
+              <div class="codemail-inbox-header">
+                <div class="codemail-inbox-header-left">
+                  <h3><span class="icon">📬</span> ACTIVE INBOX MONITOR</h3>
+                  <span class="badge-total-emails codemail-inbox-count" id="codemail-inbox-count">0 MESSAGES</span>
+                </div>
+                <div class="codemail-inbox-header-right">
+                  <select id="codemail-account-select" class="premium-select codemail-account-select">
+                    <option value="all">ALL ACCOUNTS</option>
+                  </select>
+                  <button class="mini-cyber-btn" id="codemail-refresh-btn" onclick="refreshCodeMailInbox()">↻ REFRESH</button>
+                </div>
+              </div>
+
+              <!-- SEARCH PREVIOUS DOMAIN - Fuzzy Company/Domain Search -->
+              <div class="domain-search-panel" id="domain-search-panel">
+                <div class="domain-search-header">
+                  <span class="domain-search-icon">🔍</span>
+                  <h4 class="domain-search-title">SEARCH PREVIOUS DOMAIN</h4>
+                  <span class="domain-search-hint">Find emails from affiliate landing pages</span>
+                </div>
+                <div class="domain-search-input-wrap">
+                  <input type="text" id="domain-search-input" class="premium-input domain-search-input" 
+                    placeholder="Search company name (Gentlove, SingleFlirt, AmitureX...)">
+                  <button class="mini-cyber-btn domain-search-btn" id="domain-search-btn" onclick="executeDomainSearch()">
+                    🔎 SCAN
+                  </button>
+                </div>
+                <div id="domain-search-results" class="domain-search-results hidden"></div>
+              </div>
+              
+              <div id="codemail-inbox-list" class="codemail-inbox-list">
+                <div class="empty-mailbox-state">
+                  <span class="empty-state-visual">📭</span>
+                  <p class="empty-state-head">AWAITING MAIL STREAM</p>
+                  <p class="empty-state-sub">Login with your credentials above to activate the inbox scanner.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Mail Reader Overlay -->
+        <div id="codemail-reader-overlay" class="codemail-reader-overlay hidden">
+          <div class="codemail-reader-panel">
+            <span class="tech-accent border-tl"></span>
+            <span class="tech-accent border-tr"></span>
+            <span class="tech-accent border-bl"></span>
+            <span class="tech-accent border-br"></span>
+            
+            <div class="codemail-reader-header">
+              <div>
+                <h2 id="codemail-reader-subject">Subject</h2>
+                <div class="codemail-reader-meta">
+                  <span id="codemail-reader-from">From: unknown</span>
+                  <span id="codemail-reader-date">Date: --</span>
+                </div>
+              </div>
+              <button class="admin-close-btn" onclick="closeMailReader()">CLOSE</button>
+            </div>
+            <div class="codemail-reader-body" id="codemail-reader-body">
+              <p>Loading mail content...</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Progress Engine -->
+        <section id="progress-section" class="premium-card hidden animate-fade">
+          <div class="card-header">
+            <h3>ENGINE EXECUTION STATUS</h3>
+          </div>
+          <div class="premium-progress-container">
+            <div class="premium-progress-track">
+              <div class="premium-progress-fill" id="progress-bar"></div>
+            </div>
+            <div class="premium-progress-details">
+              <span id="progress-text" class="status-indicator-text">EXTRACTING ENGINE PROTOCOL...</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- Mail Box Results Section -->
+        <section id="mailbox-section" class="premium-card margin-top animate-fade">
+          <div class="mailbox-header-row">
+            <div class="header-left-col">
+              <h3>📬 ENGINE FILTERED STACK</h3>
+              <span class="badge-total-emails" id="valid-count">0 ACCURATE RESULTS</span>
+            </div>
+            <div class="header-right-col">
+              <button id="export-btn" class="mini-cyber-btn hidden">EXPORT ARCHIVE</button>
+              <button id="clear-btn" class="mini-cyber-btn hidden warning-accent">WIPE SYSTEM</button>
+            </div>
+          </div>
+
+          <div id="mailbox-grid" class="premium-mailbox-grid">
+            <div class="empty-mailbox-state">
+              <span class="empty-state-visual">🛸</span>
+              <p class="empty-state-head">SYSTEM PROTOCOLS INACTIVE</p>
+              <p class="empty-state-sub">Select extraction parameters above to initialize raw database matching.</p>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <!-- Slim Premium Footer -->
+    <footer id="app-footer">
+      <div class="footer-container">
+        <div class="footer-slim-row">
+          <div class="footer-left">
+            <span class="footer-logo">🛸</span>
+            <span class="footer-brand">VMC PRO</span>
+            <span class="footer-dot"></span>
+            <span class="footer-copyright">© <span id="current-year">2026</span> All Rights Reserved.</span>
+          </div>
+          
+          <div class="footer-right">
+            <div class="system-status-indicator">
+              <span class="pulse-dot green"></span>
+              <span class="status-label">READY</span>
+            </div>
+            <a href="https://github.com" target="_blank" rel="noopener" class="footer-slim-link" title="GitHub Repository">
+              <span>📂</span> GitHub
+            </a>
+            <a href="https://netlify.com" target="_blank" rel="noopener" class="footer-slim-link" title="Netlify Live">
+              <span>⚡</span> Netlify
+            </a>
+            <span class="footer-dot"></span>
+            <span id="footer-text" class="footer-developer">Developed by Shoron</span>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <!-- ADMIN CONTROL STATION OVERLAY -->
+  <div id="admin-overlay" class="admin-overlay hidden">
+    <div class="admin-panel">
+      <span class="tech-accent border-tl"></span>
+      <span class="tech-accent border-tr"></span>
+      <span class="tech-accent border-bl"></span>
+      <span class="tech-accent border-br"></span>
+      <div class="admin-panel-glow"></div>
+
+      <div class="admin-header">
+        <div class="admin-header-left">
+          <div class="admin-header-icon">🛠️</div>
+          <div>
+            <h2>SYSTEM CONTROL STATION</h2>
+            <span class="admin-header-sub">Premium Command Console</span>
+          </div>
+        </div>
+        <div class="admin-header-right">
+          <span class="admin-status-chip" id="admin-status-chip"><span class="admin-status-dot"></span>SECURE</span>
+          <button id="admin-close" class="admin-close-btn">CLOSE CONSOLE</button>
+        </div>
+      </div>
+
+      <div class="admin-body">
+        <div class="admin-tabs">
+          <button class="admin-tab active" data-admin-tab="api-tab"><span class="admin-tab-icon">🔌</span> API INTERFACES</button>
+          <button class="admin-tab" data-admin-tab="theme-tab"><span class="admin-tab-icon">🎨</span> THEME DESIGN</button>
+          <button class="admin-tab" data-admin-tab="brand-tab"><span class="admin-tab-icon">🏷️</span> BRAND PROTOCOLS</button>
+          <button class="admin-tab" data-admin-tab="users-tab" id="admin-users-tab-btn"><span class="admin-tab-icon">👥</span> USER MANAGEMENT</button>
+        </div>
+
+        <div id="api-tab" class="admin-content active animate-fade">
+          <!-- Mode Toggle (admin-only) -->
+          <div class="api-mode-toggle-wrap" id="api-mode-toggle-wrap">
+            <div class="api-mode-toggle-label">
+              <span class="api-mode-toggle-title">API KEY MODE</span>
+              <span class="api-mode-toggle-hint">Choose how API keys are resolved across all accounts</span>
+            </div>
+            <div class="api-mode-segmented">
+              <button type="button" class="api-mode-option" data-mode="individual">
+                <span class="api-mode-icon">👤</span>
+                <span class="api-mode-text">INDIVIDUAL USE</span>
+                <span class="api-mode-desc">Each user uses their own saved key</span>
+              </button>
+              <button type="button" class="api-mode-option" data-mode="global">
+                <span class="api-mode-icon">🌐</span>
+                <span class="api-mode-text">GLOBAL USE</span>
+                <span class="api-mode-desc">Admin's key shared across all accounts</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Global key banner (visible to all in global mode; non-admin read-only) -->
+          <div class="global-key-banner hidden" id="global-key-banner">
+            <span class="global-key-banner-icon">🔒</span>
+            <span class="global-key-banner-note">Global mode active.</span>
+          </div>
+
+          <!-- Live Quota Mini-Card -->
+          <div class="panel-quota-card hidden" id="panel-quota-card">
+            <div class="panel-quota-card-top">
+              <span class="panel-quota-card-title">⚡ LIVE SERPAPI QUOTA</span>
+              <span class="panel-quota-status" id="panel-quota-status">—</span>
+            </div>
+            <div class="panel-quota-track">
+              <div class="panel-quota-fill" id="panel-quota-fill"></div>
+            </div>
+            <div class="panel-quota-numbers" id="panel-quota-numbers">Loading...</div>
+          </div>
+
+          <div class="admin-form-group">
+            <label>SERPAPI ENGINE KEY</label>
+            <input type="password" id="admin-serp-key" class="premium-input">
+          </div>
+          <div class="admin-form-group">
+            <label>GRAVATAR AUTH ENGINE KEY</label>
+            <input type="password" id="admin-gravatar-key" class="premium-input">
+          </div>
+          <div class="admin-form-group">
+            <label>IMGBB HOST CLOUD KEY</label>
+            <input type="password" id="admin-imgbb-key" class="premium-input">
+          </div>
+          <button id="save-api-keys" class="glow-btn">
+            <span class="glow-btn-bg"></span>
+            <span class="glow-btn-text">SAVE ACCESS KEYWORDS</span>
+          </button>
+        </div>
+
+        <div id="theme-tab" class="admin-content hidden animate-fade">
+          <div class="admin-form-group">
+            <label>ACCENT CHROMATIC SPECTRUM</label>
+            <input type="color" id="theme-primary" class="premium-color-picker" value="#00FFFF">
+          </div>
+          <div class="admin-form-group">
+            <label>SECONDARY INTERFERENCE SPECTRUM</label>
+            <input type="color" id="theme-secondary" class="premium-color-picker" value="#ff00ff">
+          </div>
+          <div class="admin-form-group">
+            <label>SYSTEM CONTAINER SPECTRAL GLOW</label>
+            <input type="color" id="theme-bg" class="premium-color-picker" value="#0a0a1a">
+          </div>
+          <button id="save-theme" class="glow-btn">
+            <span class="glow-btn-bg"></span>
+            <span class="glow-btn-text">SYNCHRONIZE SYSTEM INTERFACE</span>
+          </button>
+        </div>
+
+        <div id="brand-tab" class="admin-content hidden animate-fade">
+          <div class="admin-form-group">
+            <label>SYSTEM LOGICAL NAME</label>
+            <input type="text" id="brand-name" class="premium-input" value="VMC PRO">
+          </div>
+          <div class="admin-form-group">
+            <label>SYSTEM DESIGN LEAD AUTHOR</label>
+            <input type="text" id="brand-dev" class="premium-input" value="Shoron">
+          </div>
+          <div class="admin-form-group">
+            <label>CLOUD HEADER LOGO SYMBOL</label>
+            <input type="file" id="logo-upload" accept="image/*" class="premium-input">
+          </div>
+          <div class="admin-form-group">
+            <label>SYSTEM TASKBAR SYMBOL (FAVICON)</label>
+            <input type="file" id="favicon-upload" accept="image/*" class="premium-input">
+          </div>
+          <button id="save-brand" class="glow-btn">
+            <span class="glow-btn-bg"></span>
+            <span class="glow-btn-text">SYNCHRONIZE BRAND STACK</span>
+          </button>
+        </div>
+
+        <div id="users-tab" class="admin-content hidden animate-fade">
+          <div class="admin-form-group">
+            <label>ADD NEW USER</label>
+            <input type="text" id="admin-new-username" class="premium-input" placeholder="Username">
+          </div>
+          <div class="admin-form-group">
+            <label>USER PASSWORD</label>
+            <input type="password" id="admin-new-password" class="premium-input" placeholder="Password">
+          </div>
+          <button id="admin-add-user-btn" class="glow-btn" onclick="adminAddUser()">
+            <span class="glow-btn-bg"></span>
+            <span class="glow-btn-text">➕ ADD USER</span>
+          </button>
+          <div class="admin-users-list-header">REGISTERED USERS</div>
+          <div id="admin-users-list" class="admin-users-list"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Firebase Legacy SDKs for maximum stability -->
+  <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-database-compat.js"></script>
+  
+  <!-- Robust Parsers -->
+  <script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/blueimp-md5@2.19.0/js/md5.min.js"></script>
+  
+  <!-- Particles.js -->
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  
+  <script src="app.js"></script>
+</body>
+</html>
