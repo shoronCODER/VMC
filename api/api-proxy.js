@@ -22,7 +22,7 @@ module.exports = async (req, res) => {
   let finalUrl = targetUrl;
 
   if (targetUrl.includes('serpapi.com')) {
-    apiKey = process.env.SERPAPI_KEY || '';
+    apiKey = process.env.SERPAPI_KEY || '9fd5315b9d743e7d525f5453f377d223aa029c13ab618c29f7572c0301ee4990';
     // Always inject the server-side API key – strip any client-supplied key
     // and replace it with the trusted env-var value so the server key is
     // always authoritative.
@@ -31,7 +31,12 @@ module.exports = async (req, res) => {
     finalUrl = finalUrl.replace(/[?&]+$/, '').replace(/\?&/, '?').replace(/&&+/g, '&');
     finalUrl += (finalUrl.includes('?') ? '&' : '?') + 'api_key=' + apiKey;
   } else if (targetUrl.includes('gravatar.com')) {
-    apiKey = process.env.GRAVATAR_KEY || '';
+    apiKey = process.env.GRAVATAR_KEY || '9779:gk-o329SkDSSggxt5mjw3In179SDd8h5EszGrwceCLss3E6ihlwHXVkxv6fOh6KA';
+  } else if (targetUrl.includes('api.imgbb.com')) {
+    apiKey = process.env.IMGBB_KEY || process.env.IMGBB_API_KEY || 'f8d14329b0afdd729258591e14bdca77';
+    finalUrl = finalUrl.replace(/([?&])key=[^&]*/g, '$1');
+    finalUrl = finalUrl.replace(/[?&]+$/, '').replace(/\?&/, '?').replace(/&&+/g, '&');
+    finalUrl += (finalUrl.includes('?') ? '&' : '?') + 'key=' + apiKey;
   }
 
   try {
@@ -41,13 +46,22 @@ module.exports = async (req, res) => {
         data += chunk;
       });
       apiRes.on('end', () => {
+        if (apiRes.statusCode !== 200) {
+          // For debugging purposes, return finalUrl
+          res.setHeader('Content-Type', 'application/json');
+          res.status(apiRes.statusCode).send(JSON.stringify({
+            originalResponse: data,
+            debug_finalUrl: finalUrl
+          }));
+          return;
+        }
         res.setHeader('Content-Type', apiRes.headers['content-type'] || 'application/json');
         res.status(apiRes.statusCode).send(data);
       });
     }).on('error', (err) => {
-      res.status(500).json({ error: err.message });
+      res.status(500).json({ error: err.message, debug_finalUrl: finalUrl });
     });
   } catch (err) {
-    res.status(500).json({ error: err.message });
+    res.status(500).json({ error: err.message, debug_finalUrl: finalUrl });
   }
 };
